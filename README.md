@@ -66,7 +66,7 @@ frontend\config\main.php
 	],
 		
 ____________________________________
-backand\config\main.php
+backend\config\main.php
 ------------------------------------
 	'bootstrap' => [
 		'log',
