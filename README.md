@@ -27,63 +27,61 @@ ____________________________________
 ____________________________________
 common\config\main.php
 ------------------------------------
-
-
-'modules' => [
-
-            'blog' => [
-	    'class' => vladplanet\blog\Module::class,
-            'urlManager' => 'urlManager',// 'urlManager' by default, or maybe you can use own component urlManagerFrontend
-            'imgFilePath' => '@frontend/web/img/blog/',
-            'imgFileUrl' => '/img/blog/',
-            'userModel' => \common\models\User::class,
-            'userPK' => 'id', //default primary key for {{%user}} table
-            'userName' => 'username', //uses in view (may be field `username` or `email` or `login`)
-		],
+ 	'modules' => [
+		'blog' => [
+		'class' => vladplanet\blog\Module::class,
+		'urlManager' => 'urlManager',// 'urlManager' by default, or maybe you can use own component urlManagerFrontend
+		'imgFilePath' => '@frontend/web/img/blog/',
+		'imgFileUrl' => '/img/blog/',
+		'userModel' => \common\models\User::class,
+		'userPK' => 'id', //default primary key for {{%user}} table
+		'userName' => 'username', //uses in view (may be field `username` or `email` or `login`)
+	],
+	
 ____________________________________
 frontend\config\main.php
 ------------------------------------
-'modules' => [
-        'blog' => [
-		  	'class' => 'vladplanet\blog\Module',
-			  'controllerNamespace' => 'vladplanet\blog\controllers\frontend',
-            'blogPostPageCount' => 6,
-            'blogCommentPageCount' => 10, //20 by default
-            'enableComments' => true, //false by default
-            'schemaOrg' => [ // empty array [] by default! 
-                'publisher' => [
-                    'logo' => '/img/logo.png',
-                    'logoWidth' => 191,
-                    'logoHeight' => 74,
-                    'name' => 'My Company',
-                    'phone' => '+1 800 488 80 85',
-                    'address' => 'City, street, house'
+	'modules' => [
+		'blog' => [
+		'class' => 'vladplanet\blog\Module',
+		'controllerNamespace' => 'vladplanet\blog\controllers\frontend',
+		'blogPostPageCount' => 6,
+		'blogCommentPageCount' => 10, //20 by default
+		'enableComments' => true, //false by default
+		'schemaOrg' => [ // empty array [] by default! 
+		'publisher' => [
+			'logo' => '/img/logo.png',
+			'logoWidth' => 191,
+			'logoHeight' => 74,
+			'name' => 'My Company',
+			'phone' => '+1 800 488 80 85',
+			'address' => 'City, street, house'
                 ]
             ]
         ],
 
-   'bootstrap' => [
+	'bootstrap' => [
 		'log',
 		'vladplanet\blog\Bootstrap',
-		],
+	],
 		
 ____________________________________
 backand\config\main.php
 ------------------------------------
-'bootstrap' => [
+	'bootstrap' => [
 		'log',
-		  'vladplanet\blog\Bootstrap',
-		],
+		'vladplanet\blog\Bootstrap',
+	],
 		
-'modules' => [
-        'blog' => [
-			 			'class' => 'vladplanet\blog\Module',
-            'controllerNamespace' => 'vladplanet\blog\controllers\backend',
-            //'adminAccessControl' => 'common\components\AdminAccessControl', // null - by default 
-	   		],
-    ],
+	'modules' => [
+		'blog' => [
+			'class' => 'vladplanet\blog\Module',
+			'controllerNamespace' => 'vladplanet\blog\controllers\backend',
+			//'adminAccessControl' => 'common\components\AdminAccessControl', // null - by default 
+		],
+	],
 
-
+____________________________________
 Usage
 -----
 
