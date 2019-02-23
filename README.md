@@ -82,6 +82,13 @@ backend\config\main.php
 	],
 
 ____________________________________
+
+url
+------------------------------------
+http://yii2.local/blog
+http://yii2.local/admin/blog
+
+
 Usage
 -----
 
