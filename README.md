@@ -27,9 +27,12 @@ ____________________________________
 ____________________________________
 common\config\main.php
 ------------------------------------
+
+
 'modules' => [
-        'blog' => [
-						'class' => vladplanet\blog\Module::class,
+
+            'blog' => [
+	    'class' => vladplanet\blog\Module::class,
             'urlManager' => 'urlManager',// 'urlManager' by default, or maybe you can use own component urlManagerFrontend
             'imgFilePath' => '@frontend/web/img/blog/',
             'imgFileUrl' => '/img/blog/',
